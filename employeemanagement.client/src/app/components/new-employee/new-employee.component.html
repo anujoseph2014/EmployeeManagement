@@ -1,0 +1,51 @@
+<div class="newEmployee">
+  <div class="row">
+    <div class="col-sm-13">
+      <h4><b>New Employee</b></h4>
+      <div class="d-flex justify-content-md-end">
+        <a href="" routerLink="" class="btn btn-success back">
+        <i class='fas fa-arrow-circle-left'></i>
+        Back
+        </a>
+      </div>
+  </div>
+ </div>
+  <form [formGroup]="addEmployeeForm">
+    <div>
+      <label class="label">FirstName</label>
+      <input type="text" class="form-control" formControlName="firstName" style="text-align:left">
+    </div>
+    <div>
+      <label class="label">LastName</label>
+      <input type="text" class="form-control" formControlName="lastName" style="text-align:left">
+    </div>
+    <div>
+      <label class="label">Position</label>
+      <input type="text" class="form-control" formControlName="position" style="text-align:left">
+    </div>
+    <div>
+      <label class="label">Department</label>
+      <select class="form-control" formControlName="department" style="text-align:left">
+        <option values="">Select</option>
+        <option values="Software Analyst">Software Analyst</option>
+        <option values="Software Developer">Software Developer</option>
+        <option values="Software Development">Software Development</option>
+        <option values="QA">Quality Analyst</option>
+      </select>
+    </div>
+    <div>
+      <label class="label">Salary</label>
+      <input type="text" class="form-control" formControlName="salary" style="text-align:left">
+    </div>
+  </form>
+  </div>
+  <br/>
+
+  <div class="d-flex justify-content-md-center">
+   <button class="btn btn-success" (click)="saveEmployeeInfo()">Submit</button>
+  </div>
+
+
+
+
+

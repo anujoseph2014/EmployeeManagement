@@ -1,0 +1,54 @@
+<div class="container-xl">
+  <div class="table-responsive">
+    <div class="table-wrapper">
+      <div class="table-title; center-align">
+        <div class="row">
+          <div class="center-align">
+            <h4><b>EMPLOYEE DASHBOARD</b></h4>
+          </div>
+        </div>
+        <div class="row">
+          <div class="center-align">
+            <button class="btn btn-success" (click)="addEmployee()">
+              <i class='fas fa-plus-circle'></i><span> NEW EMPLOYEE</span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <br />
+      <table class="table table-striped table-hover table-bordered table-content">
+        <thead>
+          <tr class="center-align">
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Position</th>
+            <th>Department</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let employee of employeeList" class="center-align">
+            <td>{{ employee.firstName }}</td>
+            <td>{{ employee.lastName }}</td>
+            <td>{{ employee.position }}</td>
+            <td>{{ employee.department }}</td>
+            <td>
+              <button type="button" (click)="test()" class="btn" disabled>Edit</button>&nbsp;
+              <button type="button" (click)="deleteEmployeeConfirmation(employee)" class="btn" disabled>Delete</button>
+            </td>
+          </tr>
+          <tr>
+            <td *ngIf="employeeList.length == 0" colspan="6">No Employee Found</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+
+
+
+
+
+
